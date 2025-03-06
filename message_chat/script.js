@@ -162,6 +162,15 @@ document.addEventListener('DOMContentLoaded', async function() {
         enableSound();
         displayMessage();
     });
+    
+/* Добавлено: обработчик для снятия фокуса с кнопок после клика.
+       Этот код проходит по всем элементам <button> и после клика снимает с них фокус,
+       чтобы кнопки не оставались подсвеченными. */
+    document.querySelectorAll('button').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            this.blur(); // Снимаем фокус с кнопки
+        });
+    });
 });
 
 function sendMessage() {
