@@ -1,13 +1,13 @@
-!DOCTYPE html
-html lang=en
-head
-    meta charset=UTF-8
-    meta name=viewport content=width=device-width, initial-scale=1.0
-    titleMain Projecttitle
-    script
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Project</title>
+    <script>
         function loadNextPage(folder) {
             const iframe = document.getElementById('contentFrame');
-            iframe.src = folder + 'index.html';
+            iframe.src = folder + '/index.html';
         }
 
         window.onload = function() {
@@ -19,10 +19,10 @@ head
                 loadNextPage('test_folder');
             }
         });
-    script
-head
-body
-    h1Welcome to the Projecth1
-    iframe id=contentFrame width=100% height=600px frameborder=0iframe
-body
-html
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Project</h1>
+    <iframe id="contentFrame" width="100%" height="600px" frameborder="0"></iframe>
+</body>
+</html>
