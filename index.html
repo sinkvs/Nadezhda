@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Project</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        #contentFrame {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
     <script>
         function loadNextPage(folder) {
             const iframe = document.getElementById('contentFrame');
@@ -22,7 +36,6 @@
     </script>
 </head>
 <body>
-    <h1>Welcome to the Project</h1>
-    <iframe id="contentFrame" width="100%" height="600px" frameborder="0"></iframe>
+    <iframe id="contentFrame"></iframe>
 </body>
 </html>
