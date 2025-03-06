@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Chat Simulation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="images/chat-avatar.jpg" alt="Chat Avatar" class="chat-avatar">
+            <div class="chat-title-container">
+                <div class="chat-title">8 марта</div>
+                <div class="typing-indicator" id="typing-indicator"></div>
+            </div>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <!-- Сообщения будут добавляться здесь динамически -->
+            <div class="initial-message">
+                <p>Двумя днями ранее..</p>
+                <button id="peek-button">Посмотреть</button>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="message-input" placeholder="Введите сообщение...">
+            <button onclick="sendMessage()">Отправить</button>
+        </div>
+    </div>
+    <div class="overlay" id="overlay">
+        <button id="next-button">(*Перейти к следующей части*)</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+!DOCTYPE html
+html lang=en
+head
+    meta charset=UTF-8
+    meta name=viewport content=width=device-width, initial-scale=1.0
+    titleMain Projecttitle
+    script
+        function loadNextPage(folder) {
+            const iframe = document.getElementById('contentFrame');
+            iframe.src = folder + 'index.html';
+        }
+
+        window.onload = function() {
+            loadNextPage('message_chat');
+        };
+
+        window.addEventListener('message', function(event) {
+            if (event.data === 'finished') {
+                loadNextPage('test_folder');
+            }
+        });
+    script
+head
+body
+    h1Welcome to the Projecth1
+    iframe id=contentFrame width=100% height=600px frameborder=0iframe
+body
+html
