@@ -145,10 +145,8 @@ document.addEventListener('DOMContentLoaded', async function() {
                 }, 1000);
             }
         } else {
-            // 3-second pause before ending the chat
-            setTimeout(() => {
-                // End of chat logic here
-            }, 3000);
+            // 3-second pause before redirecting to the next page
+            setTimeout(redirectToTestFolder, 3000);
         }
     }
 
@@ -192,4 +190,9 @@ function sendMessage() {
         input.value = '';
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
+}
+
+function redirectToTestFolder() {
+    // Перенаправляем на index.html в папке test_folder
+    window.location.href = '../test_folder/index.html';
 }
